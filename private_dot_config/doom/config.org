@@ -1,0 +1,38 @@
+* UI
+** Theme
+#+begin_src emacs-lisp :tangle yes
+(setq doom-theme 'doom-solarized-light)
+(setq doom-themes-enable-bold t
+      doom-themes-enable-italic t)
+#+end_src
+** Line number
+#+begin_src emacs-lisp :tangle yes
+(setq display-line-numbers-type 'relative)
+#+end_src
+** Font
+#+begin_src emacs-lisp :tangle yes
+(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 16)
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 15)
+      doom-big-font (font-spec :family "FiraCode Nerd Font Mono" :size 24))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
+#+end_src
+** Beacon Mode
+#+begin_src emacs-lisp :tangle yes
+(beacon-mode 1)
+#+end_src
+* Navigation and Edit
+** EVIL
+#+begin_src emacs-lisp :tangle yes
+(after! evil-escape
+  (setq evil-escape-key-sequence "fd"))
+#+end_src
+
+* Org
+
+* Misc
+** Packages
+#+begin_src emacs-lisp :tangle packages.el
+(package! beacon)
+#+end_src
