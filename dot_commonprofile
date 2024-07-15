@@ -11,7 +11,8 @@ alias jo='joshuto'
 alias bshconf='nvim $HOME/dotconfig/bash'
 alias zshconf='nvim $HOME/dotconfig/zsh'
 alias tmuxconfig='nvim $HOME/dotconfig/tmux'
-alias emacs='emacsclient -c -a 'emacs''
+alias ems='/usr/local/bin/emacs --daemon'
+alias emc='emacsclient -c -a 'emacs''
 alias bark='wget --no-check-certificate "https://api.day.app/mupUWyEzXJpFVvXQpneELX/DONE"'
 
 # environmental variables
