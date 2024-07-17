@@ -99,6 +99,19 @@ qnx32d() {
    i-st-pd-docker-v.eu.artifactory.conti.de/oe:devenv
 }
 
+iip-generic() {
+    docker run -it --rm \
+   -u $(id -u):$(id -g) \
+   -e USER_NAME=$(id -un) \
+   -e USER=$(id -un) \
+   -e GROUP_NAME=$(id -gn) \
+   -e HOME \
+   -v $HOME:$HOME \
+   -v /srv:/srv \
+   -w $PWD \
+   i-st-pd-docker-v.eu.artifactory.conti.de/generic:devenv
+}
+
 qnx32bs() {
   ./meta-distro-common/scripts/setup_buildenv.py -d base-qnx -b ./workdir -m qnx7paccar-b2
   source poky/oe-init-build-env ./workdir
