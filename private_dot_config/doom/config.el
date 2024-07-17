@@ -13,5 +13,14 @@
 
 (beacon-mode 1)
 
+(setq frame-resize-pixelwise t)
+(add-to-list 'default-frame-alist '(drag-internal-border . 1))
+(add-to-list 'default-frame-alist '(internal-border-width . 5))
+
 (after! evil-escape
   (setq evil-escape-key-sequence "fd"))
+
+(setq leetcode-prefer-language "python3")
+;;disable IDE-like features
+(add-hook 'leetcode-solution-mode-hook
+          (lambda() (flycheck-mode -1)))

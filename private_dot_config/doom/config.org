@@ -22,17 +22,31 @@
 #+begin_src emacs-lisp :tangle yes
 (beacon-mode 1)
 #+end_src
+** Misc
+#+begin_src emacs-lisp :tangle yes
+(setq frame-resize-pixelwise t)
+(add-to-list 'default-frame-alist '(drag-internal-border . 1))
+(add-to-list 'default-frame-alist '(internal-border-width . 5))
+#+end_src
 * Navigation and Edit
 ** EVIL
 #+begin_src emacs-lisp :tangle yes
 (after! evil-escape
   (setq evil-escape-key-sequence "fd"))
 #+end_src
-
 * Org
 
+* App
+** Leetcode
+#+begin_src emacs-lisp :tangle yes
+(setq leetcode-prefer-language "python3")
+;;disable IDE-like features
+(add-hook 'leetcode-solution-mode-hook
+          (lambda() (flycheck-mode -1)))
+#+end_src
 * Misc
 ** Packages
 #+begin_src emacs-lisp :tangle packages.el
 (package! beacon)
+(package! leetcode)
 #+end_src
