@@ -37,5 +37,3 @@
 	pb = pull --rebase
 	ps = push
 	pf = push -f
-[http]
-	sslbackend = schannel
