@@ -13,7 +13,7 @@ alias jo='joshuto'
 alias nvdot='nvim $HOME/.local/share/chezmoi'
 alias ems='/usr/local/bin/emacs --daemon'
 alias emc='emacsclient -c -a 'emacs''
-alias bark='wget --no-check-certificate "https://api.day.app/mupUWyEzXJpFVvXQpneELX/DONE"'
+alias bark='wget --no-check-certificate "https://api.day.app/mupUWyEzXJpFVvXQpneELX/DONE" -O /dev/null'
 
 # environmental variables
 export LC_ALL=en_US.UTF-8 
@@ -115,4 +115,9 @@ iip-generic() {
 qnx32bs() {
   ./meta-distro-common/scripts/setup_buildenv.py -d base-qnx -b ./workdir -m qnx7paccar-b2
   source poky/oe-init-build-env ./workdir
+}
+
+qnx32co() {
+  repo init -u git@github-vni.geo.conti.de:sw-foundation-assets/manifests-denali.git -b denali-3.2-int -g qnx
+  repo sync -q -c
 }
