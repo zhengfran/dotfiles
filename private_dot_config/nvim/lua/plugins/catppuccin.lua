@@ -6,7 +6,7 @@ return {
         sandwich = false,
         noice = true,
         mini = true,
-        leap = true,
+        leap = false,
         markdown = true,
         neotest = true,
         cmp = true,
