@@ -1,3 +1,13 @@
+# work or personal
+{{- if eq .chezmoi.hostname "IGAS116X" "IGL3286W" }}
+[user]
+    email = "zhicheng.zheng@continental-corporation.com"
+    name = "Zheng Zhicheng (uie41442)"
+{{- else}}
+[user]
+    email = "zhicheng.ink98@gmail.com"
+    name = "Zheng Zhicheng"
+{{- end }}
 [core]
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
